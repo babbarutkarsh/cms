@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+    <style>
+        th,td{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <h5>Request details </h5>
+    {% if req %}   
+    
+    <table>
+        <th>email</th>
+        <th>clubname</th>
+        <th>contact</th>
+        <th>request type</th>
+        <th>request purpose</th>       
+        <th>Allotment Status</th>
+        {% for r in req %}
+  <tr>
+      <td>{{r.email}}</td>
+      <td>{{r.ClubName}}</td>
+      <td>{{r.Contact}}</td>
+      <td>{{r.req_type}}</td>
+      <td>{{r.req_purpose}}</td>
+      <td>{{r.alloted}}</td>
+  </tr>
+{% endfor %}
+</table>
+    {% else %}
+        <h1>No data</h1>
+    {% endif %}
+</table>        
+</body>
+</html>
