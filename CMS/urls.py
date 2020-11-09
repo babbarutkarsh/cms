@@ -15,7 +15,7 @@ urlpatterns = [
     path('student_approve/<str:user_id>', views.student_approve,name="student_approve"),
     path('student_disapprove/<str:user_id>', views.student_disapprove,name="student_disapprove"),
     path('student_reset/<str:user_id>', views.student_reset,name="student_reset"),
-    path('showmess/<str:user_id>', views.showmess,name="showmess"),
+    #path('showmess/<str:user_id>', views.showmess,name="showmess"),
 ]
 urlpatterns=urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
