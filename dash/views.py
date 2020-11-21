@@ -16,8 +16,6 @@ def about(request):
     return render(request,'about.html')
 def index(request):
     return render(request,'index.html')
-#fields=['id','email','ClubName','RepresentativeName','Contact','req_date_from','req_date_to',
-# 'req_type','req_purpose','req_purpose','formtime']
 def showformdata(request):
     if request.method=='POST':
         fm=ReqForm(request.POST)
